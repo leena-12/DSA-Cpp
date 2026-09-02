@@ -6,8 +6,6 @@ This repository documents my journey of learning **DSA using C++**, strengthenin
 
 I will use this repository to maintain my DSA concepts, practice problems, solutions, notes, mistakes, and progress.
 
----
-
 ## 🎯 Goals
 
 My main goals are to:
