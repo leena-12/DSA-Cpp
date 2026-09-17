@@ -6,6 +6,8 @@ This repository documents my journey of learning **DSA using C++**, strengthenin
 
 I will use this repository to maintain my DSA concepts, practice problems, solutions, notes, mistakes, and progress.
 
+---
+
 ## 🎯 Goals
 
 My main goals are to:
@@ -17,6 +19,8 @@ My main goals are to:
 * Practice consistently on coding platforms such as **LeetCode**.
 * Prepare for technical interviews and online assessments.
 * Write clean, readable, and efficient C++ code.
+* Understand time and space complexity.
+* Learn how to optimize brute-force solutions.
 
 ---
 
@@ -50,8 +54,9 @@ The repository will gradually cover:
 * Traversal
 * Searching
 * Frequency Counting
-* Prefix Sum
 * Two Pointers
+* In-place Modification
+* Prefix Sum
 * Sliding Window
 * Kadane's Algorithm
 
@@ -67,22 +72,32 @@ The repository will gradually cover:
 
 * Linear Search
 * Binary Search
+* First Occurrence
+* Last Occurrence
 * Binary Search Patterns
 
 ### 05. Sorting
 
+* STL Sorting
+* Ascending Order
+* Descending Order
+* Sorting-Based Problem Solving
 * Bubble Sort
 * Selection Sort
 * Insertion Sort
 * Merge Sort
 * Quick Sort
-* STL Sorting
 
 ### 06. Hashing
 
+* `map`
 * `unordered_map`
 * `unordered_set`
 * Frequency Problems
+* Duplicate Detection
+* First Non-Repeating Element
+* Two Sum
+* Common Elements
 * Hashing Patterns
 
 ### 07. Recursion
@@ -154,10 +169,27 @@ DSA-Cpp/
 ├── 03-Strings/
 │
 ├── 04-Searching/
+│   ├── linear_search.cpp
+│   ├── binary_search.cpp
+│   ├── first_occurrence.cpp
+│   ├── last_occurrence.cpp
+│   └── searching_notes.md
 │
 ├── 05-Sorting/
+│   ├── ascending.cpp
+│   ├── descending.cpp
+│   ├── largest_element.cpp
+│   ├── second_largest.cpp
+│   ├── remove_duplicates.cpp
+│   └── sorting_notes.md
 │
 ├── 06-Hashing/
+│   ├── frequency.cpp
+│   ├── duplicate.cpp
+│   ├── first_unique.cpp
+│   ├── two_sum.cpp
+│   ├── common_elements.cpp
+│   └── README.md
 │
 ├── 07-Recursion/
 │
@@ -188,12 +220,12 @@ DSA-Cpp/
 
 | Topic               | Status         |
 | ------------------- | -------------- |
-| C++ Fundamentals    | 🔄 In Progress |
-| Arrays              | ⏳ Upcoming     |
+| C++ Fundamentals    | ✅ Completed    |
+| Arrays              | ✅ Completed    |
+| Hashing             | ✅ Completed    |
+| Sorting             | ✅ Completed    |
+| Searching           | 🔄 In Progress |
 | Strings             | ⏳ Upcoming     |
-| Searching           | ⏳ Upcoming     |
-| Sorting             | ⏳ Upcoming     |
-| Hashing             | ⏳ Upcoming     |
 | Recursion           | ⏳ Upcoming     |
 | Linked Lists        | ⏳ Upcoming     |
 | Stack & Queue       | ⏳ Upcoming     |
@@ -201,6 +233,102 @@ DSA-Cpp/
 | Heap                | ⏳ Upcoming     |
 | Graphs              | ⏳ Upcoming     |
 | Dynamic Programming | ⏳ Upcoming     |
+
+### 🔍 Current Searching Progress
+
+* ✅ Linear Search
+* ✅ Binary Search
+* ✅ First Occurrence
+* ✅ Last Occurrence
+* 🔄 Binary Search Patterns
+
+---
+
+# 🧠 Concepts Practiced So Far
+
+## C++ Fundamentals
+
+* Variables
+* Data Types
+* Input / Output
+* Operators
+* Conditional Statements
+* Loops
+* Functions
+* Basic Array Operations
+
+## Arrays
+
+* Array Traversal
+* Finding Largest Element
+* Finding Smallest Element
+* Reversing an Array
+* Frequency Counting
+* Checking if an Array is Sorted
+* Moving Zeros
+* Removing Duplicates from a Sorted Array
+* Two-Pointer Technique
+* In-Place Array Modification
+
+## Hashing
+
+* `map`
+* `unordered_map`
+* Frequency Counting
+* Duplicate Detection
+* First Non-Repeating Element
+* Two Sum
+* Finding Common Elements
+* Hash-Based Problem Solving
+
+## Sorting
+
+* Ascending Sorting
+* Descending Sorting
+* `std::sort`
+* Sorting Arrays
+* Sorting Vectors
+* Sorting-Based Problem Solving
+* Second-Largest Element
+* Removing Duplicates Using Sorting
+
+## Searching
+
+### Linear Search
+
+* Sequential Searching
+* Searching Unsorted Arrays
+* Basic Search Implementation
+
+### Binary Search
+
+* Sorted Search Space
+* `low`
+* `high`
+* `mid`
+* Iterative Binary Search
+* Recursive Binary Search
+* First Occurrence
+* Last Occurrence
+* Search Space Reduction
+* `O(log n)` Search
+
+---
+
+# 🧩 Problem-Solving Patterns Learned
+
+So far, I have started practicing the following patterns:
+
+* Array Traversal
+* Frequency Counting
+* Hashing
+* Two Pointers
+* In-Place Modification
+* Sorting
+* Linear Search
+* Binary Search
+* Search Space Reduction
+* Brute Force → Optimization
 
 ---
 
@@ -217,7 +345,9 @@ Think of a Brute-Force Solution
         ↓
 Analyze Time & Space Complexity
         ↓
-Optimize
+Look for Optimization
+        ↓
+Choose the Appropriate Data Structure
         ↓
 Write the Code
         ↓
@@ -227,6 +357,35 @@ Review & Learn
 ```
 
 The goal is **not just to solve problems**, but to understand *why* a particular approach works.
+
+---
+
+# 🔄 Brute Force → Optimization
+
+An important part of my DSA journey is learning how to improve solutions.
+
+For example:
+
+```text
+Duplicate Detection
+
+Brute Force
+O(n²)
+    ↓
+Sorting
+O(n log n)
+    ↓
+Hashing
+O(n) average
+```
+
+The goal is to understand the trade-offs between:
+
+* Time
+* Space
+* Simplicity
+* Input constraints
+* Problem requirements
 
 ---
 
@@ -256,8 +415,17 @@ I will maintain notes on:
 * Time complexity
 * Space complexity
 * Best / average / worst cases
+* Complexity of common data structures and algorithms
 
-Understanding complexity will be an important part of my DSA preparation.
+Important concepts currently practiced:
+
+```text
+Linear Search   → O(n)
+Binary Search   → O(log n)
+Sorting         → O(n log n) typically
+Hashing         → O(n) average for many problems
+Nested Loops    → O(n²) commonly
+```
 
 ---
 
@@ -291,6 +459,8 @@ I will focus on:
 * Learning patterns
 * Revisiting difficult problems
 * Improving efficiency
+* Analyzing complexity
+* Writing clean C++ code
 
 I will prioritize **understanding over problem count**.
 
@@ -301,6 +471,10 @@ I will prioritize **understanding over problem count**.
 > **Don't memorize solutions. Understand the pattern.**
 
 My objective is to become capable of approaching **unfamiliar problems**, not simply reproduce solutions I have already seen.
+
+I am focusing on:
+
+**Understand → Solve → Analyze → Optimize → Review**
 
 ---
 
@@ -313,9 +487,9 @@ My broader roadmap is:
 ```text
 Programming Fundamentals
         ↓
-DSA + Problem Solving
+C++ + DSA + Problem Solving
         ↓
-Java
+Java + OOP
         ↓
 SQL
         ↓
@@ -334,9 +508,38 @@ Software Engineering Internship
 
 ## 📌 Current Focus
 
-**Current Stage:** C++ Fundamentals
+**Current Stage:** Searching — Binary Search
 
-**Next:** Arrays → Strings → Searching → Sorting → Hashing
+**Completed:**
+
+* C++ Fundamentals
+* Arrays
+* Hashing
+* Sorting
+* Linear Search
+* Binary Search Fundamentals
+
+**Next:**
+
+```text
+Binary Search Patterns
+        ↓
+Strings
+        ↓
+Recursion
+        ↓
+Linked Lists
+        ↓
+Stack & Queue
+        ↓
+Trees
+        ↓
+Heap
+        ↓
+Graphs
+        ↓
+Dynamic Programming
+```
 
 **Primary Goal:** Build strong problem-solving fundamentals before moving into advanced DSA.
 
@@ -349,3 +552,4 @@ This repository represents my long-term progress toward becoming a strong Softwa
 I am focusing on **consistent practice, understanding concepts deeply, building problem-solving ability, and improving every week.**
 
 > **Learn. Practice. Solve. Review. Repeat. 🚀**
+
