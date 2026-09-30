@@ -1,4 +1,4 @@
-# ⚡ DSA with C++
+#⚡ DSA with C++
 
 Welcome to my **Data Structures and Algorithms (DSA) with C++** repository!
 
