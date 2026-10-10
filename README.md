@@ -8,7 +8,7 @@ I will use this repository to maintain my DSA concepts, practice problems, solut
 
 ---
 
-## 🎯 Goals
+##🎯 Goals
 
 My main goals are to:
 
