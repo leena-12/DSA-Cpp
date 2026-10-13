@@ -33,7 +33,7 @@ My main goals are to:
 
 ---
 
-# 📚 Learning Roadmap
+#📚 Learning Roadmap
 
 The repository will gradually cover:
 
