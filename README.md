@@ -244,7 +244,7 @@ DSA-Cpp/
 
 ---
 
-# 🧠 Concepts Practiced So Far
+#🧠 Concepts Practiced So Far
 
 ## C++ Fundamentals
 
