@@ -8,17 +8,27 @@ int main() {
 
     unordered_map<int, int> freq;
 
+    // Count frequency of every element
     for (int i = 0; i < n; i++) {
         freq[arr[i]]++;
     }
 
+    // Print frequency of each element
+    cout << "Element frequencies:" << endl;
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " appears " << freq[arr[i]] << " time(s)" << endl;
+    }
+
+    // Find the first element that appears only once
     for (int i = 0; i < n; i++) {
         if (freq[arr[i]] == 1) {
-            cout << "First unique element: " << arr[i] << endl;
+            cout << "\nFirst unique element: " << arr[i] << endl;
             return 0;
         }
     }
 
-    cout << "No unique element found" << endl;
+    cout << "\nNo unique element found" << endl;
+
     return 0;
 }
